@@ -1,50 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>REACTJS</title>
 	<link rel="stylesheet" href="styles.css">
 	<script src="base64.js"></script>  
-	<script src="axios.min.js"></script>
 </head>
 <body>
-	<div id="application">
-		<div id="buttons">
-			<p id="loginButton" onclick="myFunction()">Login</p>
-		</div>
-		<div id="signup">
-			<input type="text" id="first" placeholder="Username">
-			<input type="password" id="password" placeholder="Password">
-		</div>
-		<p id="demo"></p>
-		<p id="pass"></p>
-	</div>
-
-	<script type="text/javascript">
-		function myFunction ()
-		{
-			var tok = document.getElementById("first").value + ':' + document.getElementById("password").value;
-			var hash = Base64.encode(tok);
-		    var authHeader = "Basic " + hash;
-			var config = {
-			  headers: {
-			  	'Authorization': authHeader,
-			  	'Content-Type': 'multipart/form-data'
-			  }
-			};
-			axios.get('https://todo.ly/api/projects.json' , config)
-			  .then(function(response){
-			    console.log(response.data);
-			    console.log(response.status); // ex.: 200
-			})
-			  .catch(function(response) {
-			    if(response instanceof Error) {
-			      console.log(response.message);
-			    } else {
-			      console.log(response.data);
-			    }
-			});
-	}
-	</script>
-
+	<div class="container"></div>
+	<script src="bundle.js"></script>
 </body>
 </html>

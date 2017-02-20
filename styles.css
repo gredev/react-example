@@ -3,50 +3,43 @@ body{
 	height: 700px;
 	margin: 0;
 	padding: 0;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
 }
 
 body > div{
 	width: 500px;
 	margin: auto;
-	margin-top: 10%;
-	font-family: 'Roboto', sans-serif;
+	margin-top: 15%;
 }
 
-#signup,#login{
+.table-responsive{
+	background: #eeefeb;
+}
+
+.table-responsive > table{
 	width: 100%;
-	height: 150px;
+	border: 1px solid #ddd;
+    border-collapse: separate;
+    border-spacing: 5px;
 }
 
-#buttons{
-	height: 80px;
-	background: #2c3e50;
+}
+th, td {
+   text-align: left;
+   vertical-align: center;
+   border: 1px solid #000;
 }
 
-#buttons > p{
-	width: 49%;
-	float: left;
-	color: white;
-	text-align: center;
-	padding-top: 25px;
-	height: 50%;
-	margin: 0;
+th {
+   background: #bbb9b9;
 }
 
-#buttons > p:hover{
+tr:hover{
 	background: #f1c40f;
 	color: #2c3e50;
 	cursor: pointer;
-}
-
-#signup{
-	background: #2c3e50;
-}
-
-#signup > input, #signup > button{
-	margin-top: 10px;
-	margin-left: 125px;
-}
-
-#first, #password{
-	width: 250px;
 }
