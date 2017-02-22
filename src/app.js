@@ -2,7 +2,6 @@ import React from 'react';
 import { Component } from 'react';
 import { connect } from 'react-redux'
 import { showProjects } from './request'
-import { Table } from 'react-bootstrap'
 
 class App extends Component {
   
@@ -23,9 +22,9 @@ class App extends Component {
   
   render() {
     return (
-      <div>
+      <div id="application">
         <h2>Projects List</h2>
-        <Table responsive>
+        <table responsive>
           <thead>
             <tr>
               <th>Id</th>
@@ -35,7 +34,7 @@ class App extends Component {
           <tbody>
             { this.renderProjectsList() }
           </tbody>
-        </Table>        
+        </table>        
       </div>
     );
   }
