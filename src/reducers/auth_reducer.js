@@ -1,5 +1,5 @@
 
-import { AUTH_USER } from '../request';
+import { AUTH_USER } from '../../constants';
 
 const INITIAL_STATE = { authenticated: false };
 

@@ -1,22 +1,31 @@
+import * as constants from '../../constants'
+import { SHOW_PROJECTS } from '../../constants'
 import axios from 'axios'
-import { browserHistory, hashHistory } from 'react-router';
 
-export const SHOW_PROJECTS = 'SHOW_PROJECTS'
+import { useRouterHistory } from 'react-router'
+import { createHashHistory } from 'history'
 
-export const AUTH_USER = 'AUTH_USER'
+const appHistory = useRouterHistory(createHashHistory)({ queryKey: false })
 
-function showProjectsData(data) {
+export function logout() {
+  return {
+    type: constants.USER_LOGGED_OUT
+  }
+}
+
+
+
+export function showProjects(data) {
     console.log("data that we have: "+data)
     return (dispatch, getState) => {
 		dispatch( { type: SHOW_PROJECTS, payload: data } );
     }
     
 }
-
+/*
 export function showProjects() {
-    return this.props.showProjectsData.bind(this); 
-    //return this.showProjectsData;    
-} 
+    return showProjectsData(this);    
+} */
 
 export function loginUser( email, password ) {
 	return function (dispatch) {
@@ -35,14 +44,12 @@ export function loginUser( email, password ) {
 		axios.get('https://todo.ly/api/projects.json' , config)
 		  .then(function(response){
 		    console.log(response.status); // ex.: 200
-		    //console.log(response.data);
 		    if(response.data.ErrorMessage == "Not Authenticated" || response.data.ErrorMessage == "Account doesn\u0027t exist"){
-		    	//dispatch({ type: AUTH_USER });
 		    	console.log("You are Not Authenticated");
 		    } else{
 		    	console.log("Great !!!, you are Authenticated");
-		    	hashHistory.push('/projects');
-		    	showProjectsData(response.data);
+		    	showProjects(response.data);
+		    	appHistory.push('/projects');
 			}
 		})
 	};

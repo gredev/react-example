@@ -1,4 +1,4 @@
-import { SHOW_PROJECTS } from '../request'
+import { SHOW_PROJECTS } from '../../constants'
 
 const initialState = {
     list: []

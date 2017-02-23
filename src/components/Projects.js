@@ -1,10 +1,10 @@
 import React from 'react';
 import { Component } from 'react';
 import { connect } from 'react-redux'
-import { showProjects } from './request'
+import { showProjects } from '../actions/user'
 
-class App extends Component {
-  
+class Projects extends Component {
+
   componentWillMount() {
     this.props.showProjects()
   }
@@ -24,7 +24,7 @@ class App extends Component {
     return (
       <div id="application">
         <h2>Projects List</h2>
-        <table responsive>
+        <table id="responsive">
           <thead>
             <tr>
               <th>Id</th>
@@ -46,4 +46,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { showProjects })(App)
+export default connect(mapStateToProps, { showProjects })(Projects)

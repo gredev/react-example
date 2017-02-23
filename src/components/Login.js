@@ -1,20 +1,15 @@
 import React from 'react';
-import { Component } from 'react';
+import { Component, PropTypes } from 'react';
+import { routerActions } from 'react-router-redux'
 import { connect } from 'react-redux'
 import { Field, reduxForm } from 'redux-form';
-import { loginUser } from './request'
+import { loginUser } from '../actions/user'
 
 const form = reduxForm({
   form: 'Login',
 });
 
 class Login extends Component {
-  
-/*  handleFormSubmit(formProps) {
-    this.props.loginUser(formProps);
-    console.log(formProps);
-  }*/
-
   myFunction ()
     {
       var name = document.getElementById("first").value;
@@ -27,7 +22,6 @@ class Login extends Component {
     const { handleSubmit } = this.props;
 
     return (
-        //<form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))} id="application">
         <form onSubmit={handleSubmit(this.myFunction.bind(this))} id="application">
           <div id="buttons">
             <button type="submit" id="buttons">Login</button>
