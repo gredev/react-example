@@ -1,9 +1,8 @@
 import React from 'react';
-import { Component, PropTypes } from 'react';
-import { routerActions } from 'react-router-redux'
+import { Component } from 'react';
 import { connect } from 'react-redux'
-import { Field, reduxForm } from 'redux-form';
-import { loginUser } from '../actions/user'
+import { reduxForm } from 'redux-form';
+import { loginUserContent } from '../actions/user'
 
 const form = reduxForm({
   form: 'Login',
@@ -12,9 +11,9 @@ const form = reduxForm({
 class Login extends Component {
   myFunction ()
     {
-      var name = document.getElementById("first").value;
+      var name = document.getElementById("uname").value;
       var pass = document.getElementById("password").value;
-      this.props.loginUser(name, pass);
+      this.props.loginUserContent(name, pass);
   }
 
    
@@ -26,19 +25,13 @@ class Login extends Component {
           <div id="buttons">
             <button type="submit" id="buttons">Login</button>
           </div>
-          <div id="signup">
-            <input type="text" name="email" id="first" placeholder="Username"/>
-            <input type="password" name="password" id="password" placeholder="Password"/>
+          <div id="login">
+            <input type="text" id="uname" placeholder="Username"/>
+            <input type="password" id="password" placeholder="Password"/>
           </div>
         </form>
     );
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    authenticated: state.auth.authenticated
-  }
-}
-
-export default connect(mapStateToProps, { loginUser })(form(Login));
+export default connect(false, { loginUserContent })(form(Login));

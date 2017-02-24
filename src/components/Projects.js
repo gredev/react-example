@@ -1,12 +1,13 @@
 import React from 'react';
 import { Component } from 'react';
 import { connect } from 'react-redux'
-import { showProjects } from '../actions/user'
+import { loginUserContent } from '../actions/user'
+import { Link } from 'react-router'
 
 class Projects extends Component {
 
   componentWillMount() {
-    this.props.showProjects()
+    this.props.loginUserContent()
   }
   
   renderProjectsList() {
@@ -22,7 +23,7 @@ class Projects extends Component {
   
   render() {
     return (
-      <div id="application">
+      <div id="apptable">
         <h2>Projects List</h2>
         <table id="responsive">
           <thead>
@@ -34,7 +35,8 @@ class Projects extends Component {
           <tbody>
             { this.renderProjectsList() }
           </tbody>
-        </table>        
+        </table>
+        <Link to="/">Logout</Link>      
       </div>
     );
   }
@@ -46,4 +48,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { showProjects })(Projects)
+export default connect(mapStateToProps, { loginUserContent })(Projects)

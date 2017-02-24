@@ -4,19 +4,16 @@ import { Component } from 'react';
 import { connect } from 'react-redux'
 import { logout } from '../actions/user'
 
-//class App extends Component {
-function App({ children, logout }) {
- // render: function() {
+class App extends Component {
+  render() {
     return (
-      <div id="application">
-        <h2>My React Application</h2>
-        <header>
-        Links:
-        <Link to="/login">Login</Link>
-      </header>      
-      </div>
+    	<div id="app">
+			<h2>My React Application</h2>
+			<div>
+				<Link to="/login">Login</Link>
+			</div>      
+		</div>
     )
-//  }
+  }
 }
-
 export default connect(false, { logout })(App)

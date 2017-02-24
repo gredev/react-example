@@ -10,24 +10,23 @@ body{
     background-color: #fff;
 }
 
-#application{
+#app, #application, #apptable{
 	width: 500px;
 	margin: auto;
 	margin-top: 10%;
 	font-family: 'Roboto', sans-serif;
 }
 
-#application > table{
+#application{
+	background: #2c3e50;
+}
+
+#apptable > table{
 	background-color: #eeefeb;
 	width: 100%;
 	border: 1px solid #ddd;
     border-collapse: separate;
     border-spacing: 5px;
-}
-
-#signup,#login{
-	width: 100%;
-	height: 150px;
 }
 
 #buttons{
@@ -52,27 +51,34 @@ body{
 	cursor: pointer;
 }
 
-#signup{
+#apptable > #buttons{
+	background-color: transparent;
+	height: 40px;
+	width: 80px;
+}
+
+#apptable > #buttons > button{
+	margin-top: 20px;
+	height: 100%;
+	width: 100%;
+	border-radius: 20px;
+}
+
+#login{
+	width: 100%;
+	height: 150px;
 	background: #2c3e50;
 }
 
-#signup > input{
+#uname, #password{
 	margin-top: 10px;
 	margin-left: 125px;
-}
-
-#first, #password{
 	width: 250px;
 }
 
-th, td {
-   text-align: left;
-   vertical-align: center;
-   border: 1px solid #000;
-}
-
 th {
-   background: #bbb9b9;
+	text-align: center;
+	background: #bbb9b9;
 }
 
 tr:hover{

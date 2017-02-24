@@ -1,4 +1,3 @@
 export const SHOW_PROJECTS = 'SHOW_PROJECTS'
-export const AUTH_USER = 'AUTH_USER'
 export const USER_LOGGED_IN = 'USER_LOGGED_IN'
 export const USER_LOGGED_OUT = 'USER_LOGGED_OUT'
