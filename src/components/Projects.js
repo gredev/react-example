@@ -2,7 +2,6 @@ import React from 'react';
 import { Component } from 'react';
 import { connect } from 'react-redux'
 import { loginUserContent } from '../actions/user'
-import { Link } from 'react-router'
 
 class Projects extends Component {
 
@@ -23,6 +22,7 @@ class Projects extends Component {
   
   render() {
     return (
+    <div id="main">
       <div id="apptable">
         <h2>Projects List</h2>
         <table id="responsive">
@@ -35,9 +35,9 @@ class Projects extends Component {
           <tbody>
             { this.renderProjectsList() }
           </tbody>
-        </table>
-        <Link to="/">Logout</Link>      
+        </table>  
       </div>
+    </div>
     );
   }
 }

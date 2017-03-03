@@ -6,7 +6,23 @@
 	<script src="base64.js"></script>  
 </head>
 <body>
-	<div class="container"></div>
-	<script src="bundle.js"></script>
+	<header id="header">
+		<h1>React Application</h1>
+		<nav id="nav">
+			<ul class="links">
+				<li id="home"><a href="#/" class="homeIcon">Home</a></li>
+				<li id="log"><a href="#/login">Login</a></li>
+				<li><a href="#/" onclick="window.location.reload();" >Logout</a></li>
+			</ul>
+		</nav>      
+	</header>
+	<section class="container">
+		<script src="bundle.js"></script>
+	</section>
+	<footer id="footer">
+		<div class="inner">
+			<p>Copyright 2017 KATANA</p>
+		</div>
+	</footer>
 </body>
 </html>

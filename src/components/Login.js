@@ -21,6 +21,7 @@ class Login extends Component {
     const { handleSubmit } = this.props;
 
     return (
+      <div id="main">
         <form onSubmit={handleSubmit(this.myFunction.bind(this))} id="application">
           <div id="buttons">
             <button type="submit" id="buttons">Login</button>
@@ -30,6 +31,7 @@ class Login extends Component {
             <input type="password" id="password" placeholder="Password"/>
           </div>
         </form>
+      </div>
     );
   }
 }

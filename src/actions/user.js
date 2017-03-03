@@ -30,7 +30,7 @@ export function loginUserContent( email, password ) {
 		    	console.log("Great !!!, you are Authenticated");
 		    	appHistory.push('/projects');
 		    	dispatch( { type: constants.SHOW_PROJECTS, payload: response.data } );
-		  
+		  		document.getElementById("log").style.display="none";
 			}
 		})
 	};

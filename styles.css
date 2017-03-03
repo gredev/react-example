@@ -1,40 +1,144 @@
-body{
-	width: 100%;
-	height: 700px;
+html, body {
 	margin: 0;
 	padding: 0;
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #333;
+	border: 0;
+	width: 100%;
+	height: 100%;
+    font-size: 100%;
+    vertical-align: baseline;
     background-color: #fff;
 }
 
-#app, #application, #apptable{
-	width: 500px;
+body {
+	line-height: 1;
+}
+
+.container, #content {
+	width: 100%;
+	height: 100%;
+	background-image: url("images/background.jpg");
+}
+
+#header {
+	width: 100%;
+	height: 70px;
 	margin: auto;
-	margin-top: 10%;
+	font-family: 'Roboto', sans-serif;
+	background-image: url("images/bg_header.jpg");
+}
+
+#header > h1 {
+	width: 100%;
+	margin: 0;
+	padding-top: 10px;
+	text-align: center;
+	color: #fff;
+}
+
+nav {
+	overflow: hidden;
+	display: inline-block;
+	float: right;
+	margin-top: 28px;
+}
+
+nav ul {
+	margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+	background-color: #f0f0f0;
+	background-image: linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
+	border-right: 1px solid rgba(9, 9, 9, 0.125);
+	box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;	
+	position: relative;
+	float: left;
+	list-style: none;
+    text-align: center;
+    border-radius: 2px;
+}
+
+nav ul li:hover{
+    background: linear-gradient(to top, rgba(40,75,20,0), rgba(40,75,20,1));
+}
+
+nav ul li a {
+	color: #999;
+    text-decoration: none !important;
+    /*Transitions*/
+    -webkit-transition: 0.4s linear all;
+    transition: 0.4s linear all;
+	display: inline-block;
+	font: 15px Lobster,Arial,sans-serif;
+	padding: 10px 25px 10px;
+	position: relative;
+	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+nav ul li a:hover {
+    color: #0407fd;
+}
+
+nav a.homeIcon {
+	background:url('images/home.png') no-repeat center center;
+	display: block;
+	overflow: hidden;
+	padding-left: 12px;
+	padding-right: 12px;
+	text-indent: -9999px;
+	width: 16px;
+}
+
+#main {
+	/*another way to center a div*/
+/*	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -250px;
+ 	margin-top: -150px;*/
+   
+    width: 500px;
+    height: 230px;
+    /*Horizontally align*/
+    margin: auto;
+    /*Vertical align*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#application, #apptable {
+	width: 500px;
 	font-family: 'Roboto', sans-serif;
 }
 
-#application{
+#application {
 	background: #2c3e50;
 }
 
-#apptable > table{
+#apptable > h2 {
+	margin: 0 0 10px 0;
+	color: #FFF;
+}
+
+#apptable > table {
 	background-color: #eeefeb;
+	opacity: 0.7;
 	width: 100%;
 	border: 1px solid #ddd;
     border-collapse: separate;
     border-spacing: 5px;
 }
 
-#buttons{
+#buttons {
 	height: 80px;
 	background: #2c3e50;
 }
 
-#buttons > button{
+#buttons > button {
 	width: 49%;
 	float: left;
 	color: white;
@@ -45,13 +149,13 @@ body{
 	background: #2c3e50;
 }
 
-#buttons > button:hover{
+#buttons > button:hover {
 	background: #f1c40f;
 	color: #2c3e50;
 	cursor: pointer;
 }
 
-#apptable > #buttons{
+#apptable > #buttons {
 	background-color: transparent;
 	height: 40px;
 	width: 80px;
@@ -64,13 +168,13 @@ body{
 	border-radius: 20px;
 }
 
-#login{
+#login {
 	width: 100%;
 	height: 150px;
 	background: #2c3e50;
 }
 
-#uname, #password{
+#uname, #password {
 	margin-top: 10px;
 	margin-left: 125px;
 	width: 250px;
@@ -81,8 +185,20 @@ th {
 	background: #bbb9b9;
 }
 
-tr:hover{
+tr:hover {
 	background: #f1c40f;
 	color: #2c3e50;
 	cursor: pointer;
+}
+
+/* Footer */
+#footer {
+	width: 100%;
+	height: 50px;
+	/*background-color: #454545;*/
+	background-image: url("images/bg_header.jpg");
+}
+
+#footer .inner{
+	float: right;
 }
