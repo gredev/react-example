@@ -5,7 +5,6 @@ html, body {
 	width: 100%;
 	height: 100%;
     font-size: 100%;
-    vertical-align: baseline;
     background-color: #fff;
 }
 
@@ -21,7 +20,7 @@ body {
 
 #header {
 	width: 100%;
-	height: 70px;
+	height: 50px;
 	margin: auto;
 	font-family: 'Roboto', sans-serif;
 	background-image: url("images/bg_header.jpg");
@@ -39,7 +38,7 @@ nav {
 	overflow: hidden;
 	display: inline-block;
 	float: right;
-	margin-top: 28px;
+	margin-top: 10px;
 }
 
 nav ul {
@@ -48,7 +47,6 @@ nav ul {
 }
 
 nav ul li {
-	background-color: #f0f0f0;
 	background-image: linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
 	border-right: 1px solid rgba(9, 9, 9, 0.125);
 	box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;	
@@ -70,7 +68,7 @@ nav ul li a {
     -webkit-transition: 0.4s linear all;
     transition: 0.4s linear all;
 	display: inline-block;
-	font: 15px Lobster,Arial,sans-serif;
+	font-family: 'Roboto', sans-serif;
 	padding: 10px 25px 10px;
 	position: relative;
 	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
@@ -81,7 +79,7 @@ nav ul li a:hover {
 }
 
 nav a.homeIcon {
-	background:url('images/home.png') no-repeat center center;
+	background: url('images/home.png') no-repeat center center;
 	display: block;
 	overflow: hidden;
 	padding-left: 12px;
@@ -90,19 +88,10 @@ nav a.homeIcon {
 	width: 16px;
 }
 
-#main {
-	/*another way to center a div*/
-/*	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-left: -250px;
- 	margin-top: -150px;*/
-   
+#main {  
     width: 500px;
     height: 230px;
-    /*Horizontally align*/
     margin: auto;
-    /*Vertical align*/
     position: absolute;
     top: 0;
     bottom: 0;
@@ -135,7 +124,6 @@ nav a.homeIcon {
 
 #buttons {
 	height: 80px;
-	background: #2c3e50;
 }
 
 #buttons > button {
@@ -146,7 +134,7 @@ nav a.homeIcon {
 	height: 70%;
 	margin: 0;
 	border: none;
-	background: #2c3e50;
+	background-color: transparent;
 }
 
 #buttons > button:hover {
@@ -171,7 +159,6 @@ nav a.homeIcon {
 #login {
 	width: 100%;
 	height: 150px;
-	background: #2c3e50;
 }
 
 #uname, #password {
@@ -195,7 +182,6 @@ tr:hover {
 #footer {
 	width: 100%;
 	height: 50px;
-	/*background-color: #454545;*/
 	background-image: url("images/bg_header.jpg");
 }
 

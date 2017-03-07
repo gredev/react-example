@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router'
 import { Component } from 'react';
 import { connect } from 'react-redux'
 import { logout } from '../actions/user'
